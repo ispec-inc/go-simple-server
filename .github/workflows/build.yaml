@@ -27,5 +27,5 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: server
-          path: server
+          name: server.tar
+          path: server.tar
