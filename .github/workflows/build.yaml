@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build Push Image
+    name: Build Image
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,7 +22,7 @@ jobs:
       - name: Docker Build and Save
         run: |
           docker build -t server .
-          docker save -o server.tar sever
+          docker save -o server.tar server
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
