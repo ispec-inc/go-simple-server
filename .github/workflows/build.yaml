@@ -21,11 +21,11 @@ jobs:
 
       - name: Docker Build and Save
         run: |
-          docker build -t server .
-          docker save -o server.tar server
+          docker build -t simple-server .
+          docker save -o simple-server.tar simple-server
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
-          files: server.tar
+          files: simple-server.tar
