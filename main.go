@@ -21,7 +21,7 @@ func main() {
 
 	addr := fmt.Sprintf(":%s", port)
 	fmt.Printf("Server listening on %s...\n", addr)
-	if err := http.ListenAndServe(port, nil); err != nil {
+	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Fatalf("Error starting server: %s\n", err)
 	}
 }
