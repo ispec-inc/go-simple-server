@@ -24,8 +24,7 @@ jobs:
           docker build -t server .
           docker save -o server.tar server
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: server.tar
-          path: server.tar
+          files: server.tar
